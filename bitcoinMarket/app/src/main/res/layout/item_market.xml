@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="market"
+            type="com.example.konrad.bitcoinmarket.model.Market" />
+
+        <variable
+            name="adapter"
+            type="com.example.konrad.bitcoinmarket.ui.market.MarketAdapter" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/market_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{market.market}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/market_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{market.price}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/market_name" />
+
+        <TextView
+            android:id="@+id/market_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{Double.toString(market.volume)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/market_price"/>
+
+        <ImageView
+            android:id="@+id/market_indicator"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@{market.priceIndicator}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/market_volume"/>
+
+        <TextView
+            android:id="@+id/market_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{Double.toString(market.quantity)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/market_indicator"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

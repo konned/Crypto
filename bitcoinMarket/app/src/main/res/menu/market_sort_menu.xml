@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_by_name"
+        app:showAsAction="collapseActionView"
+        android:title="@string/sort_by_name" />
+    <item
+        android:id="@+id/sort_by_price"
+        app:showAsAction="collapseActionView"
+        android:title="@string/sort_by_price" />
+    <item
+        android:id="@+id/sort_by_volume"
+        app:showAsAction="collapseActionView"
+        android:title="@string/sort_by_volume" />
+</menu>

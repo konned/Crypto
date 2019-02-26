@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">bitcoinMarket</string>
+    <string name="unknown_error">Unknown error happened. Please try again</string>
+    <string name="sort_by_name">By name</string>
+    <string name="sort_by_price">By price</string>
+    <string name="sort_by_volume">By volume</string>
+</resources>
